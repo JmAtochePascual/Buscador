@@ -70,7 +70,8 @@ const llenarDatosBusqueda = (event) => {
 const filtrarAutos = (datosBusqueda) => {
 
   const resultado = autos.filter(filtraMarca)
-    .filter(filtraYear);
+    .filter(filtraYear)
+    .filter(filtraMinimo);
 
   console.log(resultado);
 };
@@ -81,6 +82,9 @@ const filtrarAutos = (datosBusqueda) => {
 const filtraMarca = (auto) => auto.marca === datosBusqueda.marca || datosBusqueda.marca === '';
 
 const filtraYear = (auto) => auto.year === parseInt(datosBusqueda.year) || datosBusqueda.year === '';
+
+const filtraMinimo = (auto) => auto.precio >= parseInt(datosBusqueda.minimo) || datosBusqueda.minimo === '';
+
 
 // Cargar eventos
 document.addEventListener('DOMContentLoaded', () => {
