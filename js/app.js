@@ -60,10 +60,24 @@ const cargarYear = () => {
 
 const llenarDatosBusqueda = (event) => {
   datosBusqueda[event.target.id] = event.target.value;
-  console.log(datosBusqueda);
+
+  filtrarAutos(datosBusqueda);
 };
 
 
+
+// Filtra todos los autos 
+const filtrarAutos = (datosBusqueda) => {
+
+  const resultado = autos.filter(filtraMarca);
+
+  console.log(resultado);
+};
+
+
+
+
+const filtraMarca = (auto) => auto.marca === datosBusqueda.marca || datosBusqueda.marca === '';
 
 // Cargar eventos
 document.addEventListener('DOMContentLoaded', () => {
