@@ -69,7 +69,8 @@ const llenarDatosBusqueda = (event) => {
 // Filtra todos los autos 
 const filtrarAutos = (datosBusqueda) => {
 
-  const resultado = autos.filter(filtraMarca);
+  const resultado = autos.filter(filtraMarca)
+    .filter(filtraYear);
 
   console.log(resultado);
 };
@@ -78,6 +79,8 @@ const filtrarAutos = (datosBusqueda) => {
 
 
 const filtraMarca = (auto) => auto.marca === datosBusqueda.marca || datosBusqueda.marca === '';
+
+const filtraYear = (auto) => auto.year === parseInt(datosBusqueda.year) || datosBusqueda.year === '';
 
 // Cargar eventos
 document.addEventListener('DOMContentLoaded', () => {
