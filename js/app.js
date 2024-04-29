@@ -71,7 +71,8 @@ const filtrarAutos = (datosBusqueda) => {
 
   const resultado = autos.filter(filtraMarca)
     .filter(filtraYear)
-    .filter(filtraMinimo);
+    .filter(filtraMinimo)
+    .filter(filtraMaximo);
 
   console.log(resultado);
 };
@@ -85,6 +86,7 @@ const filtraYear = (auto) => auto.year === parseInt(datosBusqueda.year) || datos
 
 const filtraMinimo = (auto) => auto.precio >= parseInt(datosBusqueda.minimo) || datosBusqueda.minimo === '';
 
+const filtraMaximo = (auto) => auto.precio <= parseInt(datosBusqueda.maximo) || datosBusqueda.maximo === '';
 
 // Cargar eventos
 document.addEventListener('DOMContentLoaded', () => {
