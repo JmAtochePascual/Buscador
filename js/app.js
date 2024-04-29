@@ -31,9 +31,31 @@ const mostrarAutos = (autos) => {
 
 
 
+
+
+// Llena las opciones de los años
+const cargarYear = () => {
+
+  const max = new Date().getFullYear(); // Año actual
+  const min = max - 10;
+
+  for (let i = max; i >= min; i--) {
+    const option = document.createElement('option');
+    option.value = i;
+    option.textContent = i;
+    yearInputElement.appendChild(option);
+  }
+};
+
+
+
+
+
 // Cargar eventos
 document.addEventListener('DOMContentLoaded', () => {
 
   mostrarAutos(autos); // Muestra los autos al cargar
 
+
+  cargarYear(); // Llena el select de años
 });
