@@ -72,7 +72,8 @@ const filtrarAutos = (datosBusqueda) => {
   const resultado = autos.filter(filtraMarca)
     .filter(filtraYear)
     .filter(filtraMinimo)
-    .filter(filtraMaximo);
+    .filter(filtraMaximo)
+    .filter(filtraPuertas);
 
   console.log(resultado);
 };
@@ -87,6 +88,8 @@ const filtraYear = (auto) => auto.year === parseInt(datosBusqueda.year) || datos
 const filtraMinimo = (auto) => auto.precio >= parseInt(datosBusqueda.minimo) || datosBusqueda.minimo === '';
 
 const filtraMaximo = (auto) => auto.precio <= parseInt(datosBusqueda.maximo) || datosBusqueda.maximo === '';
+
+const filtraPuertas = (auto) => auto.puertas === parseInt(datosBusqueda.puertas) || datosBusqueda.puertas === '';
 
 // Cargar eventos
 document.addEventListener('DOMContentLoaded', () => {
