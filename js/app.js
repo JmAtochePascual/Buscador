@@ -74,7 +74,8 @@ const filtrarAutos = (datosBusqueda) => {
     .filter(filtraMinimo)
     .filter(filtraMaximo)
     .filter(filtraPuertas)
-    .filter(filtraTransmision);
+    .filter(filtraTransmision)
+    .filter(filtraColor);
 
   console.log(resultado);
 };
@@ -92,7 +93,9 @@ const filtraMaximo = (auto) => auto.precio <= parseInt(datosBusqueda.maximo) || 
 
 const filtraPuertas = (auto) => auto.puertas === parseInt(datosBusqueda.puertas) || datosBusqueda.puertas === '';
 
-const filtraTransmision = (auto) => auto.transmision === datosBusqueda.transmision;
+const filtraTransmision = (auto) => auto.transmision === datosBusqueda.transmision || datosBusqueda.transmision === '';
+
+const filtraColor = (auto) => auto.color === datosBusqueda.color || datosBusqueda.color === '';
 
 // Cargar eventos
 document.addEventListener('DOMContentLoaded', () => {
