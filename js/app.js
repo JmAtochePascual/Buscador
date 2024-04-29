@@ -26,6 +26,8 @@ const datosBusqueda = {
 // Muestra los autos en el HTML
 const mostrarAutos = (autos) => {
 
+  limpiarHTML();
+
   autos.forEach(auto => {
 
     const { marca, modelo, year, precio, puertas, color, transmision } = auto;
@@ -77,7 +79,7 @@ const filtrarAutos = (datosBusqueda) => {
     .filter(filtraTransmision)
     .filter(filtraColor);
 
-  console.log(resultado);
+  mostrarAutos(resultado);
 };
 
 
@@ -96,6 +98,20 @@ const filtraPuertas = (auto) => auto.puertas === parseInt(datosBusqueda.puertas)
 const filtraTransmision = (auto) => auto.transmision === datosBusqueda.transmision || datosBusqueda.transmision === '';
 
 const filtraColor = (auto) => auto.color === datosBusqueda.color || datosBusqueda.color === '';
+
+
+
+
+
+const limpiarHTML = () => {
+  while (resultadoElement.firstChild) {
+    resultadoElement.firstChild.remove();
+  }
+}
+
+
+
+
 
 // Cargar eventos
 document.addEventListener('DOMContentLoaded', () => {
