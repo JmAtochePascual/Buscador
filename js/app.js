@@ -28,15 +28,21 @@ const mostrarAutos = (autos) => {
 
   limpiarHTML();
 
-  autos.forEach(auto => {
+  if (autos.length) {
+    autos.forEach(auto => {
 
-    const { marca, modelo, year, precio, puertas, color, transmision } = auto;
-    const autoHTML = document.createElement('p');
+      const { marca, modelo, year, precio, puertas, color, transmision } = auto;
+      const autoHTML = document.createElement('p');
 
-    autoHTML.textContent = `${marca} ${modelo} - ${year} - ${puertas} Puertas - Transmisión: ${transmision} - Precio: ${precio} - Color: ${color}`;
+      autoHTML.textContent = `${marca} ${modelo} - ${year} - ${puertas} Puertas - Transmisión: ${transmision} - Precio: ${precio} - Color: ${color}`;
 
-    resultadoElement.appendChild(autoHTML);
-  });
+      resultadoElement.appendChild(autoHTML);
+    });
+    return;
+  }
+
+  // Mensaje de no resultados
+  mostrarMensajeNoResultados();
 }
 
 
@@ -59,17 +65,17 @@ const cargarYear = () => {
 
 
 
-
+// carga los datos de la busqueda
 const llenarDatosBusqueda = (event) => {
   datosBusqueda[event.target.id] = event.target.value;
 
-  filtrarAutos(datosBusqueda);
+  filtrarAutos();
 };
 
 
 
 // Filtra todos los autos 
-const filtrarAutos = (datosBusqueda) => {
+const filtrarAutos = () => {
 
   const resultado = autos.filter(filtraMarca)
     .filter(filtraYear)
@@ -102,12 +108,26 @@ const filtraColor = (auto) => auto.color === datosBusqueda.color || datosBusqued
 
 
 
-
+// limpia el listado de autos
 const limpiarHTML = () => {
   while (resultadoElement.firstChild) {
     resultadoElement.firstChild.remove();
   }
 }
+
+
+
+
+// Muestra un mensaje cuando no hay resultados
+const mostrarMensajeNoResultados = () => {
+
+  const noResultado = document.createElement('p');
+  noResultado.classList.add('alerta', 'error');
+  noResultado.textContent = 'No hay resultados, intenta con otros términos de búsqueda';
+  resultadoElement.appendChild(noResultado);
+  console.log('No hay resultados');
+};
+
 
 
 
