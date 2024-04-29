@@ -11,7 +11,15 @@ const transmisionInputElement = document.querySelector("#transmision");
 const colorInputElement = document.querySelector("#color");
 const resultadoElement = document.querySelector("#resultado");
 
-
+const datosBusqueda = {
+  marca: '',
+  year: '',
+  minimo: '',
+  maximo: '',
+  puertas: '',
+  transmision: '',
+  color: ''
+};
 
 
 
@@ -50,12 +58,25 @@ const cargarYear = () => {
 
 
 
+const llenarDatosBusqueda = (event) => {
+  datosBusqueda[event.target.id] = event.target.value;
+  console.log(datosBusqueda);
+};
+
+
 
 // Cargar eventos
 document.addEventListener('DOMContentLoaded', () => {
 
   mostrarAutos(autos); // Muestra los autos al cargar
-
-
   cargarYear(); // Llena el select de años
+
+  // Eventos para los select de búsqueda
+  marcaInputElement.addEventListener('change', llenarDatosBusqueda);
+  yearInputElement.addEventListener('change', llenarDatosBusqueda);
+  precioMinimoInputElement.addEventListener('change', llenarDatosBusqueda);
+  precioMaximoInputElement.addEventListener('change', llenarDatosBusqueda);
+  puertasInputElement.addEventListener('change', llenarDatosBusqueda);
+  transmisionInputElement.addEventListener('change', llenarDatosBusqueda);
+  colorInputElement.addEventListener('change', llenarDatosBusqueda);
 });
