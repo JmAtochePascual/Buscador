@@ -54,7 +54,8 @@ const filtrarAutos = () => {
     .filter(filtrarYear)
     .filter(filtrarPrecioMinimo)
     .filter(filtrarPrecioMaximo)
-    .filter(filtrarPuertas);
+    .filter(filtrarPuertas)
+    .filter(filtrarTransmision);
 
   // Listar autos filtrados
   listarAutos(autosFiltrados);
@@ -95,6 +96,12 @@ const filtrarPuertas = (auto) => {
   return auto.puertas === parseInt(puertas) || puertas === '';
 };
 
+
+// Filtrar por transmisión
+const filtrarTransmision = (auto) => {
+  const transmision = transmisionInputElement.value;
+  return auto.transmision === transmision || transmision === '';
+}
 
 // Limpiar HTML
 const limpiarHTML = () => {
