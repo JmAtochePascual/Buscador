@@ -52,7 +52,8 @@ const filtrarAutos = () => {
   // Filtrar autos
   const autosFiltrados = autos.filter(filtrarMarca)
     .filter(filtrarYear)
-    .filter(filtrarPrecioMinimo);
+    .filter(filtrarPrecioMinimo)
+    .filter(filtrarPrecioMaximo);
 
   // Listar autos filtrados
   listarAutos(autosFiltrados);
@@ -77,6 +78,13 @@ const filtrarYear = (auto) => {
 const filtrarPrecioMinimo = (auto) => {
   const precioMinimo = precioMinimoInputElement.value;
   return auto.precio >= precioMinimo || precioMinimo === '';
+};
+
+
+// Filtrar por precio máximo
+const filtrarPrecioMaximo = (auto) => {
+  const precioMaximo = precioMaximoInputElement.value;
+  return auto.precio <= precioMaximo || precioMaximo === '';
 };
 
 
