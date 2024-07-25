@@ -1,7 +1,10 @@
+import { autos } from "./db.js";
 import {
   listaAutos,
+  marcaInputElement,
   yearInputElement
 } from "./elementos.js";
+
 
 
 // Listar autos
@@ -34,7 +37,26 @@ const cargarYears = () => {
   }
 };
 
+
+// Filtar autos
+const filtrarAutos = () => {
+  const autosFiltrados = autos.filter(filtrarMarca)
+
+  // Listar autos filtrados
+  listarAutos(autosFiltrados);
+};
+
+
+// Filtrar por marca
+const filtrarMarca = (auto) => {
+  const marca = marcaInputElement.value;
+  return auto.marca === marca || marca === '';
+};
+
+
+
 export {
   listarAutos,
-  cargarYears
+  cargarYears,
+  filtrarAutos
 }
