@@ -1,5 +1,6 @@
 import {
-  listaAutos
+  listaAutos,
+  yearInputElement
 } from "./elementos.js";
 
 
@@ -17,6 +18,23 @@ const listarAutos = (autos) => {
 };
 
 
+// Cargar años
+const cargarYears = () => {
+
+  // Obtener el año actual
+  const anioActual = new Date().getFullYear();
+  const anioMinimo = anioActual - 10;
+
+  // Generar los años
+  for (let i = anioActual; i >= anioMinimo; i--) {
+    const option = document.createElement('option');
+    option.value = i;
+    option.textContent = i;
+    yearInputElement.appendChild(option);
+  }
+};
+
 export {
-  listarAutos
+  listarAutos,
+  cargarYears
 }
