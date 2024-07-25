@@ -4,6 +4,7 @@ import {
   marcaInputElement,
   precioMaximoInputElement,
   precioMinimoInputElement,
+  puertasInputElement,
   yearInputElement
 } from "./elementos.js";
 
@@ -29,4 +30,5 @@ document.addEventListener('DOMContentLoaded', () => {
   yearInputElement.addEventListener('change', filtrarAutos);
   precioMinimoInputElement.addEventListener('change', filtrarAutos);
   precioMaximoInputElement.addEventListener('change', filtrarAutos);
+  puertasInputElement.addEventListener('change', filtrarAutos);
 });
