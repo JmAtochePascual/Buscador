@@ -15,6 +15,19 @@ import {
 // Listar autos
 const listarAutos = (autos) => {
 
+  // Limpiar HTML
+  limpiarHTML();
+
+  // Mostrar mensaje de no resultados
+  if (autos.length === 0) {
+    const noResultado = document.createElement('div');
+    noResultado.classList.add('alerta', 'error');
+    noResultado.textContent = 'No hay resultados, intenta con otros términos de búsqueda';
+    listaAutos.appendChild(noResultado);
+    return;
+  }
+
+  // Listar autos en el HTML
   autos.forEach(auto => {
     const { marca, modelo, year, precio, puertas, color, transmision } = auto;
 
@@ -45,9 +58,6 @@ const cargarYears = () => {
 
 // Filtar autos
 const filtrarAutos = () => {
-
-  // Limpiar HTML
-  limpiarHTML();
 
   // Filtrar autos
   const autosFiltrados = autos.filter(filtrarMarca)
@@ -118,7 +128,6 @@ const limpiarHTML = () => {
     listaAutos.removeChild(listaAutos.firstChild);
   }
 };
-
 
 
 export {
