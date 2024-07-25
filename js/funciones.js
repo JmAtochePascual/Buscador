@@ -40,6 +40,11 @@ const cargarYears = () => {
 
 // Filtar autos
 const filtrarAutos = () => {
+
+  // Limpiar HTML
+  limpiarHTML();
+
+  // Filtrar autos
   const autosFiltrados = autos.filter(filtrarMarca)
 
   // Listar autos filtrados
@@ -51,6 +56,14 @@ const filtrarAutos = () => {
 const filtrarMarca = (auto) => {
   const marca = marcaInputElement.value;
   return auto.marca === marca || marca === '';
+};
+
+
+// Limpiar HTML
+const limpiarHTML = () => {
+  while (listaAutos.firstChild) {
+    listaAutos.removeChild(listaAutos.firstChild);
+  }
 };
 
 
