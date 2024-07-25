@@ -55,7 +55,8 @@ const filtrarAutos = () => {
     .filter(filtrarPrecioMinimo)
     .filter(filtrarPrecioMaximo)
     .filter(filtrarPuertas)
-    .filter(filtrarTransmision);
+    .filter(filtrarTransmision)
+    .filter(filtrarColor);
 
   // Listar autos filtrados
   listarAutos(autosFiltrados);
@@ -102,6 +103,14 @@ const filtrarTransmision = (auto) => {
   const transmision = transmisionInputElement.value;
   return auto.transmision === transmision || transmision === '';
 }
+
+
+// Filtrar por color
+const filtrarColor = (auto) => {
+  const color = colorInputElement.value;
+  return auto.color === color || color === '';
+}
+
 
 // Limpiar HTML
 const limpiarHTML = () => {

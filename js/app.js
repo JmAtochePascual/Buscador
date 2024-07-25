@@ -1,6 +1,7 @@
 import { autos } from "./db.js";
 
 import {
+  colorInputElement,
   marcaInputElement,
   precioMaximoInputElement,
   precioMinimoInputElement,
@@ -33,4 +34,5 @@ document.addEventListener('DOMContentLoaded', () => {
   precioMaximoInputElement.addEventListener('change', filtrarAutos);
   puertasInputElement.addEventListener('change', filtrarAutos);
   transmisionInputElement.addEventListener('change', filtrarAutos);
+  colorInputElement.addEventListener('change', filtrarAutos);
 });
