@@ -2,7 +2,12 @@ import { autos } from "./db.js";
 import {
   listaAutos,
   marcaInputElement,
-  yearInputElement
+  yearInputElement,
+  precioMinimoInputElement,
+  precioMaximoInputElement,
+  puertasInputElement,
+  transmisionInputElement,
+  colorInputElement,
 } from "./elementos.js";
 
 
@@ -46,7 +51,8 @@ const filtrarAutos = () => {
 
   // Filtrar autos
   const autosFiltrados = autos.filter(filtrarMarca)
-    .filter(filtrarYear);
+    .filter(filtrarYear)
+    .filter(filtrarPrecioMinimo);
 
   // Listar autos filtrados
   listarAutos(autosFiltrados);
@@ -66,6 +72,14 @@ const filtrarYear = (auto) => {
   return auto.year === parseInt(year) || year === '';
 };
 
+
+// Filtrar por precio mínimo
+const filtrarPrecioMinimo = (auto) => {
+  const precioMinimo = precioMinimoInputElement.value;
+  return auto.precio >= precioMinimo || precioMinimo === '';
+};
+
+
 // Limpiar HTML
 const limpiarHTML = () => {
   while (listaAutos.firstChild) {
@@ -78,5 +92,5 @@ const limpiarHTML = () => {
 export {
   listarAutos,
   cargarYears,
-  filtrarAutos
+  filtrarAutos,
 }
