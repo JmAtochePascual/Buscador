@@ -1,5 +1,5 @@
 import { autos } from "./db.js";
-import { marcaInputElement } from "./elementos.js";
+import { marcaInputElement, yearInputElement } from "./elementos.js";
 import {
   cargarYears,
   filtrarAutos,
@@ -17,4 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
   cargarYears();
 
   marcaInputElement.addEventListener('change', filtrarAutos);
+  yearInputElement.addEventListener('change', filtrarAutos);
 });

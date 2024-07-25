@@ -46,6 +46,7 @@ const filtrarAutos = () => {
 
   // Filtrar autos
   const autosFiltrados = autos.filter(filtrarMarca)
+    .filter(filtrarYear);
 
   // Listar autos filtrados
   listarAutos(autosFiltrados);
@@ -58,6 +59,12 @@ const filtrarMarca = (auto) => {
   return auto.marca === marca || marca === '';
 };
 
+
+// Filtrar por years
+const filtrarYear = (auto) => {
+  const year = yearInputElement.value;
+  return auto.year === parseInt(year) || year === '';
+};
 
 // Limpiar HTML
 const limpiarHTML = () => {
