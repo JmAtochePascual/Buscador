@@ -55,6 +55,6 @@ Este proyecto está bajo la licencia [MIT](https://opensource.org/licenses/MIT).
 
 ## 🌐 Ver Proyecto en la WEB
 
-Puedes ver el proyecto en funcionamiento [aquí](https://jmatochepacual.github.io/Buscador/).
+Puedes ver el proyecto en funcionamiento [aquí](https://jmatochepascual.github.io/Buscador/).
 
 Todos los derechos reservados Busqueda de Autos 2024 ©.
