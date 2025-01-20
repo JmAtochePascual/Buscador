@@ -1,34 +1,33 @@
 # ⚡️ Buscador de Autos
 
-Este proyecto es una aplicación web que permite buscar autos según diferentes criterios como marca, año, precio, puertas, transmisión y color. Utiliza datos de autos almacenados en una base de datos y muestra los resultados de la búsqueda en tiempo real en la página web.
-
-## 🎯 Contenido
-
-1. 📝[Descripción](#descripción)
-2. 🛠️[Tecnologías y Herramientas](#tecnologías-y-herramientas)
-3. 🚀[Estructura del Proyecto](#estructura-del-proyecto)
-4. 🧑‍💻[Uso](#uso)
-5. 📌[Instalación](#instalación)
-6. 🏗️[Contribución](#contribución)
-7. ✨[Licencia](#licencia)
-8. 🙈[Imagen de Referencia](#imagen-de-rereferencia)
-9. 🌐[Ver Proyecto en la WEB](#ver-proyecto-en-la-web)
-
-## Descripción
-
-Este proyecto está desarrollado en JavaScript, utilizando clases para la estructura y organización del código. Además, se emplea el paradigma de programación orientada a objetos (POO) para manejar la lógica de la aplicación de manera eficiente y estructurada.
+Este proyecto es una aplicación web que permite buscar autos según diferentes criterios como marca, año, precio, puertas, transmisión y color. Utiliza datos de autos almacenados localmente y muestra los resultados de la búsqueda en tiempo real.
 
 ## Características
 
-- Filtrado de autos por marca, año, precio, puertas, transmisión y color.
-- Visualización de los resultados de la búsqueda en tiempo real.
-- Interfaz intuitiva y fácil de usar.
+- Filtrado dinámico de autos por múltiples criterios:
+  - Marca
+  - Año (últimos 10 años)
+  - Rango de precios
+  - Número de puertas
+  - Tipo de transmisión
+  - Color
+- Actualización instantánea de resultados
+- Interfaz responsiva y amigable
+- Mensajes informativos cuando no hay resultados
 
 ## Tecnologías y Herramientas
 
-- **HTML:** Estructura de la página.
-- **CSS:** Estilos de la página utilizando Normalize.css y Skeleton CSS para un diseño responsivo.
-- **JavaScript:** Lógica para las interacciones del carrito de compras.
+- **HTML5**: Estructura semántica del sitio
+- **CSS3**:
+  - Normalize.css para reseteo de estilos
+  - Skeleton CSS para grid y componentes básicos
+  - Estilos personalizados para la interfaz
+- **JavaScript (ES6+)**:
+  - Módulos ES6
+  - Programación orientada a objetos
+  - Manipulación del DOM
+  - Event listeners
+  - Array methods
 
 ## Estructura del Proyecto
 
@@ -38,17 +37,23 @@ Este proyecto está desarrollado en JavaScript, utilizando clases para la estruc
 
 ## Uso
 
-Abrir el archivo index.html en un navegador de su elección.
+Para visualizar el proyecto localmente, sigue estos pasos:
 
-## Contribución
+1. Clona este repositorio:
 
-Si estás interesado en contribuir al proyecto, por favor sigue estos pasos:
+```
+git clone https://github.com/JMatochePascual/Buscador.git
+```
 
-1. Haz un fork del repositorio.
-2. Crea una nueva rama para tu característica (`git checkout -b mi-nueva-característica`).
-3. Compromete tus cambios (`git commit -am 'Añadir alguna característica'`).
-4. Empuja la rama (`git push origin mi-nueva-característica`).
-5. Abre un pull request.
+2. Navega al directorio del proyecto:
+
+```
+cd Buscador
+```
+
+3. Abre el archivo `index.html` en tu navegador web preferido
+
+4. Opcionalmente, puedes usar un servidor local como Live Server para una mejor experiencia.
 
 ## Instalación
 
@@ -56,13 +61,23 @@ No se requiere instalación adicional para utilizar este proyecto.
 
 ## Contribución
 
-Si estás interesado en contribuir al proyecto, por favor sigue estos pasos:
+Si deseas contribuir al proyecto, por favor sigue estos pasos en orden:
 
 1. Haz un fork del repositorio.
-2. Crea una nueva rama para tu característica (`git checkout -b mi-nueva-característica`).
-3. Compromete tus cambios (`git commit -am 'Añadir alguna característica'`).
-4. Empuja la rama (`git push origin mi-nueva-característica`).
-5. Abre un pull request.
+
+2. Crea una nueva rama para tu funcionalidad:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Realiza y confirma tus cambios:
+   ```bash
+   git commit -am 'Add new feature'
+   ```
+4. Sube los cambios a tu repositorio:
+   ```bash
+   git push origin feature-name
+   ```
+5. Abre un Pull Request desde tu repositorio hacia el proyecto principal
 
 ## Licencia
 
@@ -70,10 +85,10 @@ Este proyecto está bajo la licencia [MIT](https://opensource.org/licenses/MIT).
 
 ## Imagen de Rereferencia
 
-![](https://i.postimg.cc/vTVPzdv6/Buscador-autos.png)
+![](https://i.postimg.cc/0jPVhX47/Buscador.png)
 
-## Ver Proyecto en la WEB
+## ¡Visita Nuestro Proyecto!
 
-Puedes ver el proyecto en funcionamiento [aquí](https://jmatochepascual.github.io/Buscador/).
+¿Quieres ver Buscador de Autos en acción? ¡Haz clic aquí! 👉 [Visitar Buscador de Autos](https://jmatochepascual.github.io/Buscador/)
 
-Todos los derechos reservados Busqueda de Autos 2024 ©.
+Hecho con 💚 por JMatochePascual | ©2025 - Buscador de Autos.
