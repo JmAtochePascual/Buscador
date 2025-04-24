@@ -1,4 +1,3 @@
-// Agergar los autos a la base de datos
 export const autos = [
 	{
 		marca: 'BMW',
