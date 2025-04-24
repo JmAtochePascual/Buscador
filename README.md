@@ -1,4 +1,4 @@
-# ⚡️ Buscador de Autos
+# Buscador de Autos
 
 Este proyecto es una aplicación web que permite buscar autos según diferentes criterios como marca, año, precio, puertas, transmisión y color. Utiliza datos de autos almacenados localmente y muestra los resultados de la búsqueda en tiempo real.
 
@@ -15,25 +15,25 @@ Este proyecto es una aplicación web que permite buscar autos según diferentes 
 - Interfaz responsiva y amigable
 - Mensajes informativos cuando no hay resultados
 
-## Tecnologías y Herramientas
+## Tecnologías
 
-- **HTML5**: Estructura semántica del sitio
-- **CSS3**:
-  - Normalize.css para reseteo de estilos
-  - Skeleton CSS para grid y componentes básicos
-  - Estilos personalizados para la interfaz
-- **JavaScript (ES6+)**:
-  - Módulos ES6
-  - Programación orientada a objetos
-  - Manipulación del DOM
-  - Event listeners
-  - Array methods
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+- **HTML:** Se emplea para estructurar y organizar el contenido del sitio.
+- **CSS:** Se emplea para definir la apariencia visual y el diseño de la interfaz.
+- **JavaScript:** Se emplea para implementar la lógica y la interactividad del sitio, respondiendo a las acciones del usuario.
 
 ## Estructura del Proyecto
 
-- **css/**: Carpeta con los estilos compilados.
-- **js/**: Carpeta código con lógica del proyecto.
-- **index.html**: Página principal.
+- **css/**: Almacena todos los archivos relacionados con los estilos y la presentación visual del sitio.
+- **js/**: Almacena los archivos que contienen la lógica y funcionalidades interactivas del sitio.
+- **index.html**: Archivo principal que define la estructura base del sitio.
+
+## Instalación
+
+> No se requiere instalación adicional para utilizar este proyecto.
 
 ## Uso
 
@@ -55,15 +55,11 @@ cd Buscador
 
 4. Opcionalmente, puedes usar un servidor local como Live Server para una mejor experiencia.
 
-## Instalación
-
-No se requiere instalación adicional para utilizar este proyecto.
-
 ## Contribución
 
 Si deseas contribuir al proyecto, por favor sigue estos pasos en orden:
 
-1. Haz un fork del repositorio.
+1. Haz un fork del repositorio
 
 2. Crea una nueva rama para tu funcionalidad:
    ```bash
@@ -81,14 +77,6 @@ Si deseas contribuir al proyecto, por favor sigue estos pasos en orden:
 
 ## Licencia
 
-Este proyecto está bajo la licencia [MIT](https://opensource.org/licenses/MIT).
+Este proyecto se encuentra disponible bajo la licencia MIT. Puedes consultar los términos completos [aquí](https://opensource.org/licenses/MIT).
 
-## Imagen de Rereferencia
-
-![](https://i.postimg.cc/0jPVhX47/Buscador.png)
-
-## ¡Visita Nuestro Proyecto!
-
-¿Quieres ver Buscador de Autos en acción? ¡Haz clic aquí! 👉 [Visitar Buscador de Autos](https://jmatochepascual.github.io/Buscador/)
-
-Hecho con 💚 por JMatochePascual | ©2025 - Buscador de Autos.
+Desarrollado con 💚 por JMCode | © 2025 - Transformando ideas en soluciones digitales
